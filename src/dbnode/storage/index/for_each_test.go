@@ -32,7 +32,7 @@ import (
 )
 
 func TestWriteBatchForEachUnmarkedBatchByBlockStart(t *testing.T) {
-	ctrl := gomock.NewController(t)
+	ctrl := gomock.NewController(xtest.Reporter{t})
 	defer ctrl.Finish()
 
 	blockSize := time.Hour
@@ -79,7 +79,7 @@ func TestWriteBatchForEachUnmarkedBatchByBlockStart(t *testing.T) {
 }
 
 func TestWriteBatchForEachUnmarkedBatchByBlockStartMore(t *testing.T) {
-	ctrl := gomock.NewController(t)
+	ctrl := gomock.NewController(xtest.Reporter{t})
 	defer ctrl.Finish()
 
 	blockSize := time.Hour
