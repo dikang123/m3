@@ -121,6 +121,7 @@ func genRegexpAst(language *unicode.RangeTable) gopter.Gen {
 		genRegexpNoOperands(language),
 		genRegexpLiteral(language),
 		genRegexpSingleOperands(language),
+		genRegexpAnyOperands(language),
 	)
 }
 
